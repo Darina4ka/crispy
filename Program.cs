@@ -15,10 +15,10 @@ try
     }
     else 
     {
-        Console.WriteLine ("Нужно введите пятизначное число!");
+        Console.WriteLine ("Нужно ввести пятизначное число!");
     }
 }
 catch
 {
-    Console.WriteLine ("Нужно введите пятизначное число!");
+    Console.WriteLine ("Нужно ввести пятизначное число!");
 };
