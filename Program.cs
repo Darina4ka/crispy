@@ -1,27 +1,19 @@
-﻿Console.Write ("Введите координату х для точки A ");
-double xa = Convert.ToInt32 (Console.ReadLine());
-Console.Write ("Введите координату y для точки А ");
-double ya = Convert.ToInt32 (Console.ReadLine());
-Console.Write ("Введите координату z для точки А ");
-double za = Convert.ToInt32 (Console.ReadLine());
-Console.Write ("Введите координату х для точки В");
-double xb = Convert.ToInt32 (Console.ReadLine());
-Console.Write ("Введите координату y для точки В");
-double yb = Convert.ToInt32 (Console.ReadLine());
-Console.Write ("Введите координату z для точки В");
-double zb = Convert.ToInt32 (Console.ReadLine());
-int AB;
-try
+﻿double lengthBetween(int xa, int ya, int za, int xb, int yb, int zb)
 {
-    Math.Pow (xb , 2);
-    Math.Pow (xa , 2);
-    Math.Pow (yb , 2);
-    Math.Pow (ya , 2);
-    Math.Pow (zb , 2);
-    Math.Pow (za , 2);
-    AB = sqrt();
+double xres = (xb * xb)-(2 * xa * xb) + (xa * xa);
+double yres = (xb * xb)-(2 * xa * xb) + (xa * xa);
+double zres = (xb * xb)-(2 * xa * xb) + (xa * xa);
+double res = Math.Sqrt(xres + yres + zres);
+return res;
 }
-catch
-{
-Console.WriteLine("Надо было вводить именно целые числа");
-}
+
+Console.WriteLine("Введите координаты первой точки");
+int xa = Convert.ToInt32(Console.ReadLine());
+int ya = Convert.ToInt32(Console.ReadLine());
+int za = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координаты второй точки");
+int xb = Convert.ToInt32(Console.ReadLine());
+int yb = Convert.ToInt32(Console.ReadLine());
+int zb = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"Расстояние между точками = {lengthBetween(xa,ya,za,xb,yb,zb)}");
